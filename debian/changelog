@@ -1,26 +1,15 @@
-pixman (0.44.0-3) unstable; urgency=medium
+pixman (0.44.0-3deepin1) unstable; urgency=medium
 
-  * Replace timeout bump patch by using a multiplier option instead.
-    Thanks, Aurelien Jarno! (Closes: #1086999)
+  * Update: New upstream release.
 
- -- Timo Aaltonen <tjaalton@debian.org>  Sat, 09 Nov 2024 11:02:55 +0200
+ -- xiangzelong <xiangzelong@deepin.org>  Thu, 24 Jul 2025 11:37:14 +0800
 
-pixman (0.44.0-2) unstable; urgency=medium
+pixman (0.42.2-1deepin1) unstable; urgency=medium
 
-  * patches: Increase test timeout 120->240s. (Closes: #1086999)
+  * feat: add sw64 support.
 
- -- Timo Aaltonen <tjaalton@debian.org>  Fri, 08 Nov 2024 09:58:04 +0200
+ -- hudeng <hudeng@deepin.org>  Wed, 04 Jun 2025 10:35:38 +0800
 
-pixman (0.44.0-1) unstable; urgency=medium
-
-  * New upstream release.
-  * patches: Refresh patch.
-  * control, rules: Build with meson.
-  * symbols: Updated.
-  * control: Migrate to pkgconf.
-  * rules: Drop obsolete dbgsym-migration.
-
- -- Timo Aaltonen <tjaalton@debian.org>  Thu, 07 Nov 2024 16:48:29 +0200
 
 pixman (0.42.2-1) unstable; urgency=medium
 

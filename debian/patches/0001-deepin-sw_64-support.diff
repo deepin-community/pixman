@@ -1,0 +1,14 @@
+diff --git a/test/thread-test.c b/test/thread-test.c
+index 12c51e3..6774f2f 100644
+--- a/test/thread-test.c
++++ b/test/thread-test.c
+@@ -1,6 +1,6 @@
+ #include "utils.h"
+ 
+-#if !defined (HAVE_PTHREADS) && !defined (_WIN32)
++#if (!defined (HAVE_PTHREADS) && !defined (_WIN32)) || defined (__sw_64__)
+ 
+ int main ()
+ {
+
+
