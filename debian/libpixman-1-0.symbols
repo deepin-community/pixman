@@ -39,8 +39,9 @@ libpixman-1.so.0 libpixman-1-0 #MINVER#
  pixman_glyph_cache_thaw@Base 0.27.2
  pixman_glyph_get_extents@Base 0.27.2
  pixman_glyph_get_mask_format@Base 0.27.2
- pixman_image_composite@Base 0.15.14
  pixman_image_composite32@Base 0.18.0
+ pixman_image_composite64f@Base 0.46.4
+ pixman_image_composite@Base 0.15.14
  pixman_image_create_bits@Base 0.15.12
  pixman_image_create_bits_no_clear@Base 0.27.4
  pixman_image_create_conical_gradient@Base 0
@@ -61,6 +62,7 @@ libpixman-1.so.0 libpixman-1-0 #MINVER#
  pixman_image_set_accessors@Base 0
  pixman_image_set_alpha_map@Base 0
  pixman_image_set_clip_region32@Base 0.11.2
+ pixman_image_set_clip_region64f@Base 0.46.4
  pixman_image_set_clip_region@Base 0
  pixman_image_set_component_alpha@Base 0
  pixman_image_set_destroy_function@Base 0.15.12
@@ -78,6 +80,7 @@ libpixman-1.so.0 libpixman-1-0 #MINVER#
  pixman_rasterize_trapezoid@Base 0
  pixman_region32_clear@Base 0.25.2
  pixman_region32_contains_point@Base 0.11.2
+ pixman_region32_contains_pointf@Base 0.46.4
  pixman_region32_contains_rectangle@Base 0.11.2
  pixman_region32_copy@Base 0.11.2
  pixman_region32_empty@Base 0.44.0
@@ -87,10 +90,12 @@ libpixman-1.so.0 libpixman-1-0 #MINVER#
  pixman_region32_init@Base 0.11.2
  pixman_region32_init_from_image@Base 0.18.0
  pixman_region32_init_rect@Base 0.11.2
+ pixman_region32_init_rectf@Base 0.46.4
  pixman_region32_init_rects@Base 0.11.2
  pixman_region32_init_with_extents@Base 0.11.2
  pixman_region32_intersect@Base 0.11.2
  pixman_region32_intersect_rect@Base 0.19.6
+ pixman_region32_intersect_rectf@Base 0.46.4
  pixman_region32_inverse@Base 0.11.2
  pixman_region32_n_rects@Base 0.11.2
  pixman_region32_not_empty@Base 0.11.2
@@ -99,10 +104,43 @@ libpixman-1.so.0 libpixman-1-0 #MINVER#
  pixman_region32_selfcheck@Base 0.11.2
  pixman_region32_subtract@Base 0.11.2
  pixman_region32_translate@Base 0.11.2
+ pixman_region32_translatef@Base 0.46.4
  pixman_region32_union@Base 0.11.2
  pixman_region32_union_rect@Base 0.11.2
+ pixman_region32_union_rectf@Base 0.46.4
+ pixman_region64f_clear@Base 0.46.4
+ pixman_region64f_contains_point@Base 0.46.4
+ pixman_region64f_contains_pointf@Base 0.46.4
+ pixman_region64f_contains_rectangle@Base 0.46.4
+ pixman_region64f_copy@Base 0.46.4
+ pixman_region64f_empty@Base 0.46.4
+ pixman_region64f_equal@Base 0.46.4
+ pixman_region64f_extents@Base 0.46.4
+ pixman_region64f_fini@Base 0.46.4
+ pixman_region64f_init@Base 0.46.4
+ pixman_region64f_init_from_image@Base 0.46.4
+ pixman_region64f_init_rect@Base 0.46.4
+ pixman_region64f_init_rectf@Base 0.46.4
+ pixman_region64f_init_rects@Base 0.46.4
+ pixman_region64f_init_with_extents@Base 0.46.4
+ pixman_region64f_intersect@Base 0.46.4
+ pixman_region64f_intersect_rect@Base 0.46.4
+ pixman_region64f_intersect_rectf@Base 0.46.4
+ pixman_region64f_inverse@Base 0.46.4
+ pixman_region64f_n_rects@Base 0.46.4
+ pixman_region64f_not_empty@Base 0.46.4
+ pixman_region64f_rectangles@Base 0.46.4
+ pixman_region64f_reset@Base 0.46.4
+ pixman_region64f_selfcheck@Base 0.46.4
+ pixman_region64f_subtract@Base 0.46.4
+ pixman_region64f_translate@Base 0.46.4
+ pixman_region64f_translatef@Base 0.46.4
+ pixman_region64f_union@Base 0.46.4
+ pixman_region64f_union_rect@Base 0.46.4
+ pixman_region64f_union_rectf@Base 0.46.4
  pixman_region_clear@Base 0.25.2
  pixman_region_contains_point@Base 0
+ pixman_region_contains_pointf@Base 0.46.4
  pixman_region_contains_rectangle@Base 0
  pixman_region_copy@Base 0
  pixman_region_empty@Base 0.44.0
@@ -112,10 +150,12 @@ libpixman-1.so.0 libpixman-1-0 #MINVER#
  pixman_region_init@Base 0
  pixman_region_init_from_image@Base 0.18.0
  pixman_region_init_rect@Base 0
+ pixman_region_init_rectf@Base 0.46.4
  pixman_region_init_rects@Base 0
  pixman_region_init_with_extents@Base 0
  pixman_region_intersect@Base 0
  pixman_region_intersect_rect@Base 0.19.6
+ pixman_region_intersect_rectf@Base 0.46.4
  pixman_region_inverse@Base 0
  pixman_region_n_rects@Base 0
  pixman_region_not_empty@Base 0
@@ -125,8 +165,10 @@ libpixman-1.so.0 libpixman-1-0 #MINVER#
  pixman_region_set_static_pointers@Base 0
  pixman_region_subtract@Base 0
  pixman_region_translate@Base 0
+ pixman_region_translatef@Base 0.46.4
  pixman_region_union@Base 0
  pixman_region_union_rect@Base 0
+ pixman_region_union_rectf@Base 0.46.4
  pixman_sample_ceil_y@Base 0
  pixman_sample_floor_y@Base 0
  pixman_transform_bounds@Base 0.13.2
@@ -145,9 +187,9 @@ libpixman-1.so.0 libpixman-1-0 #MINVER#
  pixman_transform_point_31_16@Base 0 1
  pixman_transform_point_31_16_3d@Base 0 1
  pixman_transform_point_31_16_affine@Base 0 1
+ pixman_transform_point_3d@Base 0
  pixman_transform_rotate@Base 0.13.2
  pixman_transform_scale@Base 0.13.2
  pixman_transform_translate@Base 0.13.2
- pixman_transform_point_3d@Base 0
  pixman_version@Base 0.10.0
  pixman_version_string@Base 0.10.0

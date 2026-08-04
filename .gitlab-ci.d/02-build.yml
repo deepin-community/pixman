@@ -20,59 +20,34 @@ include:
   - local: .gitlab-ci.d/templates/build.yml
     inputs:
       target: linux-amd64
-  - local: .gitlab-ci.d/templates/build.yml
+  - local: .gitlab-ci.d/templates/build-aarch64.yml
     inputs:
       target: linux-arm-v5
-      qemu_cpu: arm1136
       # Disable coverage, as the tests take too long to run with a single thread.
       enable_gnu_coverage: false
-  - local: .gitlab-ci.d/templates/build.yml
+  - local: .gitlab-ci.d/templates/build-aarch64.yml
     inputs:
       target: linux-arm-v7
-      qemu_cpu: max
-  - local: .gitlab-ci.d/templates/build.yml
+  - local: .gitlab-ci.d/templates/build-aarch64.yml
     inputs:
       target: linux-arm64-v8
-      qemu_cpu: max
   - local: .gitlab-ci.d/templates/build.yml
     inputs:
       target: linux-mips
-      toolchain: [gnu]
+      toolchain: [gnu]  # TODO: https://gitlab.freedesktop.org/pixman/pixman/-/issues/105
       qemu_cpu: 74Kf
       enable_gnu_coverage: false
-  # TODO: Merge with the one above once the following issue is resolved:
-  # https://gitlab.freedesktop.org/pixman/pixman/-/issues/105).
-  - local: .gitlab-ci.d/templates/build.yml
+  - local: .gitlab-ci.d/templates/build-kvm.yml
     inputs:
-      target: linux-mips
-      toolchain: [llvm]
-      qemu_cpu: 74Kf
-      job_name_prefix: "."
-      job_name_suffix: ":failing"
-      allow_failure: true
-      retry: 0
-  - local: .gitlab-ci.d/templates/build.yml
-    inputs:
-      target: linux-mips64el
+      target: linux-mips64le
       qemu_cpu: Loongson-3A4000
-  - local: .gitlab-ci.d/templates/build.yml
+  - local: .gitlab-ci.d/templates/build-kvm.yml
     inputs:
       target: linux-mipsel
-      toolchain: [gnu]
+      toolchain: [gnu]  # TODO: https://gitlab.freedesktop.org/pixman/pixman/-/issues/105
       qemu_cpu: 74Kf
       # Disable coverage, as the tests take too long to run with a single thread.
       enable_gnu_coverage: false
-  # TODO: Merge with the one above once the following issue is resolved:
-  # https://gitlab.freedesktop.org/pixman/pixman/-/issues/105).
-  - local: .gitlab-ci.d/templates/build.yml
-    inputs:
-      target: linux-mipsel
-      toolchain: [llvm]
-      qemu_cpu: 74Kf
-      job_name_prefix: "."
-      job_name_suffix: ":failing"
-      allow_failure: true
-      retry: 0
   - local: .gitlab-ci.d/templates/build.yml
     inputs:
       target: linux-ppc
@@ -81,13 +56,13 @@ include:
   - local: .gitlab-ci.d/templates/build.yml
     inputs:
       target: linux-ppc64
-      qemu_cpu: ppc64
+      qemu_cpu: power9
       enable_gnu_coverage: false
-  - local: .gitlab-ci.d/templates/build.yml
+  - local: .gitlab-ci.d/templates/build-kvm.yml
     inputs:
       target: linux-ppc64le
       qemu_cpu: power10
-  - local: .gitlab-ci.d/templates/build.yml
+  - local: .gitlab-ci.d/templates/build-kvm.yml
     inputs:
       target: linux-riscv64
       qemu_cpu: rv64
@@ -99,9 +74,8 @@ include:
     inputs:
       target: windows-amd64
       enable_gnu_coverage: false
-  - local: .gitlab-ci.d/templates/build.yml
+  - local: .gitlab-ci.d/templates/build-aarch64.yml
     inputs:
       target: windows-arm64-v8
       toolchain: [llvm]  # GNU toolchain doesn't seem to support Windows on ARM.
-      qemu_cpu: max
       enable_gnu_coverage: false
