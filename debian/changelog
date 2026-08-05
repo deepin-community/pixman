@@ -1,3 +1,9 @@
+pixman (0.46.4-1deepin1) unstable; urgency=medium
+
+  * update changelog
+
+ -- GuoYao <guoyao@uniontech.com>  Wed, 05 Aug 2026 15:41:50 +0800
+
 pixman (0.46.4-1) unstable; urgency=medium
 
   [ Dylan Aïssi ]
